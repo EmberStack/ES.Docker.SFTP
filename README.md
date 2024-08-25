@@ -122,8 +122,8 @@ You can customize the values of the helm deployment by using the following Value
 | `image.repository`                                          | Container image repository                                                       | `emberstack/sftp`                                       |
 | `image.tag`                                                 | Container image tag                                                              | `latest`                                                |
 | `image.pullPolicy`                                          | Container image pull policy                                                      | `Always` if `image.tag` is `latest`, else `IfNotPresent`|
-| `storage.volumes`                                           | Defines additional volumes for the pod                                           | `{}`                                                    |
-| `storage.volumeMounts`                                      | Defines additional volumes mounts for the sftp container                         | `{}`                                                    |
+| `storage.volumes`                                           | Defines additional volumes for the pod                                           | `[]`                                                    |
+| `storage.volumeMounts`                                      | Defines additional volumes mounts for the sftp container                         | `[]`                                                    |
 | `configuration`                                             | Allows the in-line override of the configuration values                          | `null`                                                  |
 | `configuration.Global.Chroot.Directory`                     | Global chroot directory for the `sftp` user group. Can be overriden per-user     | `"%h"`                                                  |
 | `configuration.Global.Chroot.StartPath`                     | Start path for the `sftp` user group. Can be overriden per-user                  | `"sftp"`                                                |
